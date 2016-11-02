@@ -180,12 +180,10 @@ temperatura = get3231Temp();
 
 if (temperatura0 != temperatura) 
     { 
-   for (int y=130; y < tft.width(); y+=1)
+   for (int y=130; y < 160; y+=1)
    {
-   tft.drawFastHLine(0, y, tft.height(), ST7735_GREY);
+   tft.drawFastHLine(0, y, 128, ST7735_GREY);
    }
-   tft.setCursor (10, 130);
-   tft.print("       ");  
    tft.setTextSize(3);
    tft.setTextColor(TFT_BLACK);
    tft.setCursor (10, 130);
