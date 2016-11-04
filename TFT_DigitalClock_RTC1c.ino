@@ -55,7 +55,6 @@ static uint8_t conv2d(const char* p) {
   return 10 * v + *++p - '0';
 }
 
-//uint8_t hh=conv2d(__TIME__), mm=conv2d(__TIME__+3), ss=conv2d(__TIME__+6);  // Get H, M, S from compile time
 byte jos = 10;
 
 #include <Wire.h>
