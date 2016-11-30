@@ -87,7 +87,8 @@ int tsemn, ttot;
 int hzeci, hunit;
 int previousHumidity = 0;
 char umiditateChar[10];
-
+unsigned long masurare;
+unsigned long intervalmasurare = 30000;
 
 void setup () 
 {
@@ -116,6 +117,9 @@ digitalWrite(buzzer, LOW);
   mma = 00;
   al = 1;  // 0 = alarm is off (must put in 1 foar active)
 
+temperature = dht.readTemperature();
+umiditate = dht.readHumidity();
+masurare = millis();
 }
 
 
@@ -138,9 +142,13 @@ if (digitalRead(meniu) == LOW)
   tft.fillRect(0,0,128,160,ST7735_BLACK);
   }
 
-
+if ((millis() - masurare) > intervalmasurare)
+{
 temperature = dht.readTemperature();
 umiditate = dht.readHumidity();
+delay(500);
+masurare = millis();
+}
 
   readDS3231time(&ss, &mm, &hh, &zz, &dd, &ll,&yy);
 
