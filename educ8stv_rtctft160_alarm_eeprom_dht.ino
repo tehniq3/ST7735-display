@@ -591,6 +591,7 @@ if (mma < 0) mma = 59;
   
   nivel = 0;  
   previousTemperature= 0.0;
+  previousHumidity= 0;
   initial = 1;
    printText("TEMPERATURE", ST7735_GREEN,5,85,1);  // Temperature Static Text
    printText("HUMIDITY", ST7735_RED,5,130,1);
