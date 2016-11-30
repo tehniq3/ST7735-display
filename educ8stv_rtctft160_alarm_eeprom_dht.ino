@@ -154,7 +154,7 @@ if (digitalRead(meniu) == LOW)
   tft.fillRect(0,0,128,160,ST7735_BLACK);
   }
 
-if ((millis() - masurare) > intervalmasurare)
+if (((millis() - masurare) > intervalmasurare) || initial)
 {
 temperature = dht.readTemperature();
 umiditate = dht.readHumidity();
