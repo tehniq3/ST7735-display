@@ -575,9 +575,8 @@ if (mma < 0) mma = 59;
 // omm = 99;
  previousTemperature= 0.0;
  initial = 1;
-    printText("TEMPERATURE", ST7735_GREEN,30,85,1);  // Temperature Static Text
-    printText("MAX", ST7735_RED,18,130,1);
-    printText("MIN", ST7735_BLUE,95,130,1);
+    printText("TEMPERATURE", ST7735_GREEN,5,85,1);  // Temperature Static Text
+    printText("HUMIDITY", ST7735_RED,5,130,1);      // Humidity Static Text
  }
 }  // end main loop
 
